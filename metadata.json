@@ -1,0 +1,7 @@
+{
+  "name": "Hoya Team 東京旅遊手冊 2026",
+  "description": "專為 Hoya 團隊設計的東京旅遊一頁式網站，包含倒數計時、行李清單、景點導覽、詳細行程、分帳錢包及旅遊資訊。",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
