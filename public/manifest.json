@@ -1,0 +1,35 @@
+{
+  "short_name": "Hoya 2026",
+  "name": "Hoya Team Tokyo Pride 2026",
+  "icons": [
+    {
+      "src": "https://img.icons8.com/color/192/rainbow-flag.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "https://img.icons8.com/color/192/rainbow-flag.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable"
+    },
+    {
+      "src": "https://img.icons8.com/color/512/rainbow-flag.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    },
+    {
+      "src": "https://img.icons8.com/color/512/rainbow-flag.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ],
+  "start_url": "./index.html",
+  "background_color": "#fffbfc",
+  "display": "standalone",
+  "theme_color": "#ffadad",
+  "description": "Hoya Team Tokyo Pride Trip 2026 Travel Manual"
+}

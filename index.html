@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    
+    <!-- PWA / Add to Home Screen - 核心圖標設定 -->
+    <title>Hoya Team Tokyo 2026</title>
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#ffadad" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Hoya 2026" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <!-- iOS 專用圖標 - 加入 precomposed 強制覆蓋 -->
+    <link rel="apple-touch-icon" href="https://img.icons8.com/color/192/rainbow-flag.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://img.icons8.com/color/192/rainbow-flag.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="https://img.icons8.com/color/120/rainbow-flag.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="https://img.icons8.com/color/152/rainbow-flag.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://img.icons8.com/color/180/rainbow-flag.png" />
+    
+    <!-- 通用 Icon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://img.icons8.com/color/32/rainbow-flag.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="https://img.icons8.com/color/16/rainbow-flag.png" />
+    <link rel="shortcut icon" href="https://img.icons8.com/color/96/rainbow-flag.png" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=M+PLUS+Rounded+1c:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --pride-red: #ffadad;
+        --pride-orange: #ffd6a5;
+        --pride-yellow: #fdffb6;
+        --pride-green: #caffbf;
+        --pride-blue: #9bf6ff;
+        --pride-purple: #bdb2ff;
+      }
+
+      body {
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        background-color: #fffbfc;
+        background-image: 
+          radial-gradient(circle at 10% 20%, rgba(255, 173, 173, 0.08) 0%, transparent 20%),
+          radial-gradient(circle at 90% 80%, rgba(155, 246, 255, 0.08) 0%, transparent 20%),
+          url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 10c2-5 7-5 9-2s-1 8-5 10c4 2 7 7 5 10s-7 1-9-2c-2 3-7 5-9 2s-1-8 5-10c-4-2-7-7-5-10s7-1 9 2z' fill='%23ffb7c5' fill-opacity='0.03'/%3E%3C/svg%3E");
+        background-attachment: fixed;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      .font-cute-title { font-family: 'Fredoka', sans-serif; }
+      .rainbow-text {
+        background: linear-gradient(to right, #E57373, #FFB74D, #FDD835, #81C784, #4FC3F2, #BA68C8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+        filter: drop-shadow(0 2px 4px rgba(0,0,0,0.05));
+      }
+      .rainbow-bg { background: linear-gradient(to right, #ffadad, #ffd6a5, #fdffb6, #caffbf, #9bf6ff, #a0c4ff, #bdb2ff, #ffc6ff); }
+      .glass {
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+      }
+      .particle { position: fixed; pointer-events: none; z-index: 9999; animation: fall linear infinite; }
+      .sakura-petal { background-color: #ffdae2; border-radius: 100% 0 100% 100%; }
+      .heart-particle { color: #ffb7b2; font-size: 15px; }
+      @keyframes fall {
+        0% { transform: translate(0, -10px) rotate(0deg) scale(1); opacity: 1; }
+        100% { transform: translate(100px, 100vh) rotate(360deg) scale(0.5); opacity: 0; }
+      }
+      .floating-emoji { position: fixed; pointer-events: none; z-index: 0; opacity: 0.15; animation: float 8s ease-in-out infinite; }
+      @keyframes float { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-20px) rotate(10deg); } }
+      ::-webkit-scrollbar { width: 0px; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "firebase/": "https://esm.sh/firebase@^12.7.0/",
+    "vite": "https://esm.sh/vite@^7.3.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div class="floating-emoji" style="top: 10%; left: 5%; font-size: 50px;">🌈</div>
+    <div class="floating-emoji" style="top: 25%; right: 8%; font-size: 40px;">🦄</div>
+    <div id="root"></div>
+
+    <script type="module" src="./index.tsx"></script>
+
+    <script>
+      function createParticle() {
+        const isHeart = Math.random() > 0.6;
+        const particle = document.createElement('div');
+        if (isHeart) {
+          particle.className = 'particle heart-particle';
+          particle.innerHTML = '❤️';
+          const colors = ['#ffadad', '#ffd6a5', '#fdffb6', '#caffbf', '#9bf6ff', '#a0c4ff', '#bdb2ff', '#ffc6ff'];
+          particle.style.color = colors[Math.floor(Math.random() * colors.length)];
+        } else {
+          particle.className = 'particle sakura-petal';
+          const size = Math.random() * 8 + 6 + 'px';
+          particle.style.width = size;
+          particle.style.height = size;
+        }
+        particle.style.left = Math.random() * 100 + 'vw';
+        particle.style.animationDuration = Math.random() * 4 + 6 + 's';
+        particle.style.opacity = Math.random() * 0.4 + 0.2;
+        document.body.appendChild(particle);
+        setTimeout(() => particle.remove(), 10000);
+      }
+      setInterval(createParticle, 500);
+    </script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
