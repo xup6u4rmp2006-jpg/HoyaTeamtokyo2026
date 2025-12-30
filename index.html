@@ -2,28 +2,25 @@
 <html lang="zh-TW">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/jpeg" href="/logo.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     
-    <!-- PWA / Add to Home Screen - 核心圖標設定 -->
+    <!-- PWA 核心設定 - 加入 ?v=2 強制瀏覽器刷新快取 -->
     <title>Hoya Team Tokyo 2026</title>
-    <link rel="manifest" href="manifest.json" />
+    <link rel="manifest" href="manifest.json?v=2" />
     <meta name="theme-color" content="#ffadad" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="Hoya 2026" />
     <meta name="mobile-web-app-capable" content="yes" />
 
-    <!-- iOS 專用圖標 - 加入 precomposed 強制覆蓋 -->
-    <link rel="apple-touch-icon" href="https://img.icons8.com/color/192/rainbow-flag.png" />
-    <link rel="apple-touch-icon-precomposed" href="https://img.icons8.com/color/192/rainbow-flag.png" />
-    <link rel="apple-touch-icon" sizes="120x120" href="https://img.icons8.com/color/120/rainbow-flag.png" />
-    <link rel="apple-touch-icon" sizes="152x152" href="https://img.icons8.com/color/152/rainbow-flag.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="https://img.icons8.com/color/180/rainbow-flag.png" />
+    <!-- iOS 專用圖標 (最關鍵：解決顯示字母 H 的問題) -->
+    <link rel="apple-touch-icon" href="/logo.jpg" />
+    <link rel="apple-touch-icon-precomposed" href="/logo.jpg" />
     
     <!-- 通用 Icon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="https://img.icons8.com/color/32/rainbow-flag.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="https://img.icons8.com/color/16/rainbow-flag.png" />
-    <link rel="shortcut icon" href="https://img.icons8.com/color/96/rainbow-flag.png" />
+    <!-- <link rel="icon" type="image/png" href="https://img.icons8.com/fluency/48/rainbow-flag.png" />
+    <link rel="shortcut icon" href="https://img.icons8.com/fluency/96/rainbow-flag.png" /> -->
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=M+PLUS+Rounded+1c:wght@400;700;800&display=swap" rel="stylesheet">
